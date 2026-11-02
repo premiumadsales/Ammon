@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ammon Couches & Decor Showroom – Up to 20% Off</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--dark:#1e1814;--dark2:#2b231d;--gold:#c8772e;--ink:#241d18;--sand:#f3ece4;--muted:#7a6e64}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}html,body{max-width:100%;overflow-x:clip}
+body{font-family:Poppins,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.5}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px; padding-top: 2rem;}
+header{background:var(--dark);color:#fff;position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:.5px;display:flex;align-items:center;gap:8px}
+.logo i{width:26px;height:26px;border-radius:6px;background:var(--gold);display:inline-block}
+.logo img{height:46px;width:auto;display:block}
+.links{display:flex;gap:26px;font-weight:500;font-size:.95rem}
+.links a{border-bottom:2px solid transparent;padding:4px 0}.links a:hover{border-color:var(--gold)}
+.ib{background:none;color:#fff;height:42px;padding:0 12px;border-radius:30px;font-weight:600;position:relative}
+.ib:hover{background:rgba(255,255,255,.1)}
+.badge{background:var(--gold);border-radius:10px;padding:1px 7px;font-size:.7rem;margin-left:6px}
+#menuBtn{display:none;font-size:1.4rem}
+.hero{background:var(--dark);color:#fff;display:grid;grid-template-columns:1fr 1fr;min-height:540px}
+.hero-l{display:flex;flex-direction:column;justify-content:center;gap:20px;padding:50px 50px 50px max(20px,calc((100vw - 1240px)/2 + 20px))}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.8rem);line-height:1.1;font-weight:800}
+.hero p{color:#cbbfb3;max-width:460px}
+.btn{display:inline-block;padding:14px 30px;border-radius:40px;font-weight:600;background:var(--gold);color:#fff}
+.btn.sec{background:none;border:2px solid rgba(255,255,255,.5);margin-left:10px}
+.hero-r{background:var(--dark2);display:grid;place-items:center;padding:30px 20px}
+.vs{position:relative;overflow:hidden;width:min(100%,440px);aspect-ratio:853/1280;border-radius:18px;background:#000}
+.slides{display:flex;height:100%;transition:transform .7s cubic-bezier(.6,0,.2,1)}
+.slide{min-width:100%;height:100%;display:grid;place-items:center;text-align:center;padding:30px;color:#fff}
+.slide img,.slide video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.slide svg{width:70%;margin-bottom:14px}.slide b{font-size:1.7rem;display:block}
+.dots{position:absolute;bottom:20px;left:0;right:0;display:flex;justify-content:center;gap:8px}
+.dots button{width:9px;height:9px;border-radius:5px;background:rgba(255,255,255,.7)}.dots .on{width:30px;background:#fff}
+main{padding:50px 0 10px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:34px}
+.tabs button{padding:10px 20px;border-radius:30px;background:var(--sand);font-weight:600}
+.tabs .on{background:var(--dark);color:#fff}
+.cat{margin-bottom:54px}.cat h2{font-size:1.7rem;font-weight:800;border-bottom:2px solid var(--sand);padding-bottom:10px;margin-bottom:22px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--sand);border-radius:18px;padding:12px;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 34px rgba(36,29,24,.16)}
+.img{position:relative;background:#fff;border-radius:12px;aspect-ratio:4/5;overflow:hidden;display:grid;place-items:center}
+.img img,.img video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.img svg{width:80%}
+.tag{position:absolute;top:10px;left:10px;background:var(--gold);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:6px;z-index:2}
+.info{padding:12px 4px 4px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{font-size:.98rem;font-weight:600}.info small{color:var(--muted)}
+.price{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}.price s{color:var(--muted);font-size:.85rem}.price b{color:var(--gold);font-size:1.1rem}
+.add{margin-top:8px;background:var(--dark);color:#fff;padding:11px;border-radius:10px;font-weight:600}.add:hover{background:var(--gold)}
+.band{background:var(--sand);padding:46px 0;margin-top:20px}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}.feat b{display:block;font-size:1.05rem}.feat span{color:var(--muted);font-size:.9rem}
+footer{background:var(--dark);color:#cbbfb3;padding:44px 0 22px}
+.fg{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:30px}footer h4{color:#fff;margin-bottom:10px}footer p{font-size:.92rem;margin-bottom:6px}
+.copy{border-top:1px solid #3a2f27;margin-top:30px;padding-top:16px;font-size:.85rem}
+#drawer{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:#fff;z-index:100;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-10px 0 40px rgba(0,0,0,.25)}
+#drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;background:var(--dark);color:#fff}.dh button{background:none;color:#fff;font-size:1.6rem}
+#items{flex:1;overflow:auto;padding:14px 20px}
+.ci{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 0;border-bottom:1px solid var(--sand);font-size:.92rem}
+.ci button{background:var(--sand);width:26px;height:26px;border-radius:50%;font-weight:700}.ci .rm{background:none;width:auto;color:var(--muted);text-decoration:underline;font-weight:400}
+.df{padding:16px 20px;border-top:1px solid var(--sand);display:flex;flex-direction:column;gap:8px}
+.df input,.df textarea{border:1px solid #ddd;border-radius:10px;padding:10px;font:inherit}
+.wa{background:#25d366;color:#04230f;font-weight:700;padding:13px;border-radius:30px}
+#toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,100px);background:var(--ink);color:#fff;padding:12px 22px;border-radius:30px;transition:transform .3s;z-index:120}#toast.show{transform:translate(-50%,0)}
+@media(max-width:1023px){.grid{grid-template-columns:repeat(3,1fr)}.hero{grid-template-columns:1fr;min-height:0}.hero-l{padding:40px 20px}.feat{grid-template-columns:1fr 1fr}}
+@media(max-width:639px){.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:8px}.info h3{font-size:.88rem}.fg{grid-template-columns:1fr}
+.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--dark);flex-direction:column;gap:0;padding:8px 20px 16px}.links.open{display:flex}.links a{padding:12px 0}#menuBtn{display:block}.cat h2{font-size:1.3rem}}
+</style>
+</head>
+<body>
+<!-- SVG pictures used until you add real photos (see PRODUCTS in the script) -->
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="sofa" viewBox="0 0 200 130"><rect x="30" y="20" width="140" height="55" rx="16" fill="currentColor"/><rect x="8" y="48" width="36" height="58" rx="14" fill="currentColor" opacity=".85"/><rect x="156" y="48" width="36" height="58" rx="14" fill="currentColor" opacity=".85"/><rect x="34" y="62" width="132" height="42" rx="12" fill="currentColor"/><path d="M100 64v38" stroke="#0003" stroke-width="2"/><rect x="26" y="106" width="8" height="16" rx="3" fill="#2b231d"/><rect x="166" y="106" width="8" height="16" rx="3" fill="#2b231d"/></symbol>
+<symbol id="chair" viewBox="0 0 200 130"><rect x="62" y="14" width="76" height="60" rx="20" fill="currentColor"/><rect x="44" y="52" width="26" height="46" rx="12" fill="currentColor" opacity=".85"/><rect x="130" y="52" width="26" height="46" rx="12" fill="currentColor" opacity=".85"/><rect x="58" y="64" width="84" height="36" rx="12" fill="currentColor"/><rect x="58" y="100" width="7" height="20" rx="3" fill="#2b231d"/><rect x="135" y="100" width="7" height="20" rx="3" fill="#2b231d"/></symbol>
+<symbol id="lamp" viewBox="0 0 200 130"><path d="M72 18h56l18 46H54z" fill="currentColor"/><rect x="97" y="64" width="6" height="46" fill="#2b231d"/><ellipse cx="100" cy="114" rx="26" ry="6" fill="#2b231d"/></symbol>
+<symbol id="vase" viewBox="0 0 200 130"><path d="M86 14h28v18c24 12 30 40 22 70-3 10-8 14-14 14H78c-6 0-11-4-14-14-8-30-2-58 22-70z" fill="currentColor"/><path d="M100 14c-6-12-2-18 8-12M100 14c8-12 18-8 14 2" stroke="#4a6b3a" stroke-width="3" fill="none"/></symbol>
+<symbol id="mirror" viewBox="0 0 200 130"><ellipse cx="100" cy="65" rx="46" ry="58" fill="none" stroke="currentColor" stroke-width="9"/><ellipse cx="100" cy="65" rx="38" ry="50" fill="#dfe9ee"/><path d="M78 40l22-12" stroke="#fff" stroke-width="5" stroke-linecap="round"/></symbol>
+</defs></svg>
+
+<header><div class="wrap nav">
+ <a href="#top" class="logo"><img src="images/Ammon%20Stores.png" alt="Ammon Furniture &amp; Electronics"><span id="brand" hidden>AMMON SHOWROOM</span></a>
+ <nav class="links" id="links"><a href="#top">Home</a><a href="#sofas">Couches</a><a href="#sets">Living Sets</a><a href="#decor">Decor</a><a href="#visit">Visit Us</a></nav>
+ <div><button class="ib" id="cartBtn">🛒 Cart<span class="badge" id="cc">0</span></button><button class="ib" id="menuBtn" aria-label="Menu">☰</button></div>
+</div></header>
+
+<section class="hero" id="top">
+ <div class="hero-l">
+  <h1>Couches & Decor That Make a House a Home</h1>
+  <p>Premium sofas, living room sets and decor pieces, displayed in our showroom and delivered to your door. Showroom sale: up to 20% off.</p>
+  <div><a href="#sofas" class="btn">Shop Couches</a><a href="#decor" class="btn sec">Browse Decor</a></div>
+ </div>
+ <div class="hero-r"><div class="vs">
+  <!-- Replace any slide with <img src="media/Flyer 1.jpg"> or <video src="media/Video 1.mp4" muted loop playsinline> -->
+  <div class="slides" id="slides">
+   <div class="slide" style="background:#8a5a44"><div><svg><use href="#sofa" style="color:#f1d9c4"/></svg><b>Luxury Sofas</b>From ₦360,000</div></div>
+   <div class="slide" style="background:#3f5a4a"><div><svg><use href="#lamp" style="color:#f3e2b3"/></svg><b>Statement Lighting</b>Warm, elegant, affordable</div></div>
+   <div class="slide" style="background:#33445a"><div><svg><use href="#vase" style="color:#e9dccb"/></svg><b>Decor Accents</b>Finish every room</div></div>
+  </div>
+  <div class="dots" id="dots"></div>
+ </div></div>
+</section>
+
+<main class="wrap" id="main">
+ <div class="tabs" id="tabs"></div>
+ <div id="shop"></div>
+</main>
+
+<section class="band"><div class="wrap feat">
+ <div><b>🚚 Doorstep Delivery</b><span>Careful delivery and setup</span></div>
+ <div><b>🛋️ Visit & Try</b><span>Sit on it before you buy</span></div>
+ <div><b>🎨 Custom Colours</b><span>Choose fabric and finish</span></div>
+ <div><b>💬 Order on WhatsApp</b><span>Fast replies, easy payment</span></div>
+</div></section>
+
+<footer id="visit"><div class="wrap">
+ <div class="fg">
+  <div><h4 id="brand2"> <a href="#top" class="logo"><img src="images/Ammon%20Stores.png" alt="Ammon Furniture &amp; Electronics"><span id="brand" >AMMON</span></a></h4><p>Couches, living room sets and home decor.</p></div>
+  <div><h4>Visit our showroom</h4><p>Your showroom address, city</p><p>Mon – Sat, 9am – 6pm</p></div>
+  <div><h4>Contact</h4><p>WhatsApp: <span id="waShow"></span></p></div>
+ </div>
+ <p class="copy">© 2026 All rights reserved.</p>
+</div></footer>
+
+<aside id="drawer" aria-label="Cart">
+ <div class="dh"><b>Your cart</b><button id="x" aria-label="Close">×</button></div>
+ <div id="items"></div>
+ <div class="df"><div style="display:flex;justify-content:space-between"><span>Total</span><b id="tot">₦0</b></div>
+  <input id="nm" placeholder="Your name"><textarea id="ad" rows="2" placeholder="Delivery address"></textarea>
+  <button class="wa" id="wa">Checkout on WhatsApp</button></div>
+</aside>
+<div id="toast"></div>
+
+<script>
+const BRAND='AMMON SHOWROOM';          /* your showroom name */
+const WA='2348109346053';             /* WhatsApp number, international format, no + */
+const CATS=[['sofas','Couches & Sofas'],['sets','Living Room Sets'],['decor','Decor & Accents']];
+/* PRODUCTS: c=category, n=name, w=was price, p=now price, art=picture used until you add photos,
+   col=colour of that picture, img='media/yourphoto.jpg' (optional), vid='media/yourvideo.mp4' (optional) */
+const PRODUCTS=[
+ {c:'sofas',n:'Milano 3-Seater Sofa',w:450000,p:360000,art:'sofa',col:'#8a5a44',d:'Velvet · 3 seats'},
+ {c:'sofas',n:'Aria L-Shape Sectional',w:780000,p:624000,art:'sofa',col:'#4e6b5c',d:'Fabric · 5 seats'},
+ {c:'sofas',n:'Duke Leather Couch',w:620000,p:496000,art:'sofa',col:'#3b2a22',d:'Leather · 3 seats'},
+ {c:'sofas',n:'Luna Accent Chair',w:180000,p:144000,art:'chair',col:'#c8772e',d:'Velvet · 1 seat'},
+ {c:'sofas',n:'Oslo Loveseat',w:320000,p:256000,art:'sofa',col:'#6f7f95',d:'Linen · 2 seats'},
+ {c:'sofas',n:'Regal Chesterfield',w:540000,p:432000,art:'sofa',col:'#7b2d3b',d:'Tufted · 3 seats'},
+ {c:'sets',n:'Haven 7-Seater Set',w:950000,p:760000,art:'sofa',col:'#a38b72',d:'3+2+1+1 seats'},
+ {c:'sets',n:'Zen 5-Seater Set',w:720000,p:576000,art:'sofa',col:'#5d6b58',d:'3+1+1 seats'},
+ {c:'sets',n:'Royal Gold Set',w:1200000,p:960000,art:'sofa',col:'#b08a3e',d:'Premium 7 seats'},
+ {c:'sets',n:'Cloud Modular Set',w:880000,p:704000,art:'sofa',col:'#d6cfc6',d:'Modular · 6 seats'},
+ {c:'decor',n:'Aurora Floor Lamp',w:85000,p:68000,art:'lamp',col:'#e8c98a',d:'Gold finish'},
+ {c:'decor',n:'Terra Ceramic Vase',w:35000,p:28000,art:'vase',col:'#b8613a',d:'Handmade'},
+ {c:'decor',n:'Halo Wall Mirror',w:120000,p:96000,art:'mirror',col:'#c8a24a',d:'Oval · gold frame'},
+ {c:'decor',n:'Bloom Table Lamp',w:55000,p:44000,art:'lamp',col:'#e9dccb',d:'Bedside / console'},
+ {c:'decor',n:'Sage Tall Vase',w:42000,p:33600,art:'vase',col:'#7d9a7a',d:'Glazed ceramic'},
+ {c:'decor',n:'Sunburst Mirror',w:98000,p:78400,art:'mirror',col:'#3b2a22',d:'Round · black frame'}
+];
+const naira=n=>'₦'+n.toLocaleString('en-NG');
+const $=id=>document.getElementById(id);
+const toast=m=>{const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),1500)};
+$('brand').textContent=$('brand2').textContent=BRAND;$('waShow').textContent='+'+WA;
+
+/* ---- shop ---- */
+function card(p,i){
+ const media=p.vid?`<video src="${p.vid}#t=0.1" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause()"></video>`
+  :p.img?`<img src="${p.img}" alt="${p.n}" loading="lazy">`:`<svg viewBox="0 0 200 130" style="color:${p.col}"><use href="#${p.art}"/></svg>`;
+ return `<article class="card"><div class="img"><span class="tag">-${Math.round((1-p.p/p.w)*100)}%</span>${media}</div>
+  <div class="info"><h3>${p.n}</h3><small>${p.d||''}</small><div class="price"><s>${naira(p.w)}</s><b>${naira(p.p)}</b></div>
+  <button class="add" data-i="${i}">Add to Cart</button></div></article>`;
+}
+function renderShop(only){
+ $('shop').innerHTML=CATS.filter(c=>!only||c[0]===only).map(([id,name])=>`<section class="cat" id="${id}"><h2>${name}</h2><div class="grid">${PRODUCTS.map((p,i)=>p.c===id?card(p,i):'').join('')}</div></section>`).join('');
+}
+$('tabs').innerHTML=[['','All']].concat(CATS).map(([id,n],k)=>`<button data-t="${id}" class="${k?'':'on'}">${n}</button>`).join('');
+$('tabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;[...$('tabs').children].forEach(x=>x.classList.toggle('on',x===b));renderShop(b.dataset.t)};
+renderShop();
+
+/* ---- cart ---- */
+let cart=[];try{cart=JSON.parse(localStorage.getItem('showroom-cart')||'[]')}catch(e){}
+const save=()=>{try{localStorage.setItem('showroom-cart',JSON.stringify(cart))}catch(e){}};
+function draw(){
+ $('cc').textContent=cart.reduce((n,x)=>n+x.q,0);
+ const sum=cart.reduce((s,x)=>s+PRODUCTS[x.i].p*x.q,0);$('tot').textContent=naira(sum);
+ $('items').innerHTML=cart.length?cart.map((x,k)=>{const p=PRODUCTS[x.i];return `<div class="ci"><b>${p.n}</b><b>${naira(p.p*x.q)}</b><span><button data-a="-" data-k="${k}">−</button> ${x.q} <button data-a="+" data-k="${k}">+</button></span><button class="rm" data-a="x" data-k="${k}">Remove</button></div>`}).join(''):'<p style="padding:30px 0;text-align:center;color:#7a6e64">Your cart is empty.</p>';
+}
+$('shop').onclick=e=>{const b=e.target.closest('.add');if(!b)return;const i=+b.dataset.i,f=cart.find(x=>x.i===i);f?f.q++:cart.push({i,q:1});save();draw();toast('Added: '+PRODUCTS[i].n)};
+$('items').onclick=e=>{const b=e.target.closest('[data-a]');if(!b)return;const x=cart[+b.dataset.k];if(b.dataset.a==='+')x.q++;if(b.dataset.a==='-')x.q=Math.max(1,x.q-1);if(b.dataset.a==='x')cart.splice(+b.dataset.k,1);save();draw()};
+$('cartBtn').onclick=()=>$('drawer').classList.add('open');$('x').onclick=()=>$('drawer').classList.remove('open');
+$('wa').onclick=()=>{
+ if(!cart.length)return toast('Your cart is empty');
+ const L=cart.map((x,k)=>{const p=PRODUCTS[x.i];return `*${k+1}. ${p.n}*\n${naira(p.p)} x ${x.q} = ${naira(p.p*x.q)}`}).join('\n\n');
+ const m=`Hello, I would like to order:\n\n${L}\n\n*Total: ${$('tot').textContent}*\n\nName: ${$('nm').value||'-'}\nDelivery address: ${$('ad').value||'-'}`;
+ const u=`https://wa.me/${WA}?text=${encodeURIComponent(m)}`;window.open(u,'_blank','noopener')||(location.href=u)};
+draw();
+
+/* ---- hero slider (3 seconds per slide) ---- */
+const S=[...document.querySelectorAll('.slide')];let cur=0;
+$('dots').innerHTML=S.map(()=>'<button></button>').join('');
+function go(i){cur=(i+S.length)%S.length;$('slides').style.transform=`translateX(-${cur*100}%)`;[...$('dots').children].forEach((d,j)=>d.classList.toggle('on',j===cur))}
+$('dots').onclick=e=>{const i=[...$('dots').children].indexOf(e.target);if(i>-1)go(i)};
+go(0);setInterval(()=>go(cur+1),3000);
+
+$('menuBtn').onclick=()=>$('links').classList.toggle('open');
+$('links').onclick=e=>{if(e.target.tagName==='A')$('links').classList.remove('open')};
+</script>
+</body>
+</html>
